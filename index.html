@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ODD</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      height: 80px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      height: 45px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .icons span {
+      margin-left: 20px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero-text {
+      color: white;
+      text-align: left;
+      max-width: 600px;
+      margin-left: 5%;
+      text-shadow: 0 3px 15px rgba(0,0,0,0.7);
+    }
+
+    .hero-text h1 {
+      font-size: 45px;
+      font-weight: 800;
+    }
+
+    .hero-text h2 {
+      font-size: 38px;
+      margin-top: 5px;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      margin-top: 10px;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    /* STORES */
+    .stores {
+      padding: 100px 40px;
+      display: flex;
+      justify-content: space-around;
+      background: #fff;
+      text-transform: uppercase;
+    }
+
+    .store-block h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .store-block p {
+      margin: 3px 0;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .icons span { margin-left: 10px; }
+      .hero-text h1 { font-size: 32px; }
+      .hero-text h2 { font-size: 26px; }
+      .stores { flex-direction: column; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <img src="odd.png" alt="ODD Logo" class="logo" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#shop">Catalog</a></li>
+        <li><a href="#new">New</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="bg.jpg" alt="background" class="hero-bg" />
+    <div class="hero-text">
+      <h1>ODD</h1>
+      <h2>PERSONAS CON IDENTIDAD</h2>
+    </div>
+  </section>
+
+  <section id="stores" class="stores">
+    <div class="store-block">
+      <h3>STORE / CABA</h3>
+      <p>DIRECCIÓN EJEMPLO 123</p>
+      <p>C1414, BUENOS AIRES</p>
+    </div>
+
+    <div class="store-block">
+      <h3>STORE / LA PLATA</h3>
+      <p>CALLE FICTICIA 456</p>
+      <p>B1900, LA PLATA</p>
+    </div>
+  </section>
+</body>
+</html>
 
